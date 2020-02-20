@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Uber uns</title>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/style.css">
+    <link rel="icon" type="image/png" href="images/Logo.png" />
+
+</head>
+
+<body id="bg">
+
+   <!-- Logo -->
+  <a href="index.html">
+    <div id="logo"><img src="images/Logo.png" alt="sdfsdf" class="logo"></div>
+    </a>
+
+     <!-- Anmelden -->
+    <div id="login" class="loginWrapper">
+      <img id="closeLogin" src="images/x_white.png" alt="close1" class="close">
+      <div class="anmelden">ANMELDEN</div>
+      <a href="registrierung.html">
+      <div class="registerLink">DU HAST NOCH KEINEN ACCOUNT?</div>
+      </a>
+
+      <form method="post">
+        <label class="abstand">
+        <input name="logNickname" id="name" type="text" class="inputUser" placeholder="BENUTZERNAME"><br>
+      </label>
+        <input name="logPasswort" id="name" type="password" class="inputUser" placeholder="PASSWORT">
+
+      <div id="buttonLogin" class="containerLogin">
+        <div class="centerLogin">
+          <button class="btnLogin" name="loginButton" type="submit">
+            <span>ANMELDEN</span>
+          </button>
+
+        </div>
+        </div>
+    </div>
+
+
+ <!-- Abmelden -->
+    <div id="login1" class="loginWrapper1">
+      <img id="closeLogin" src="images/x_white.png" alt="close1" class="close1">
+      <div class="anmelden1">ABMELDEN</div>
+
+        <div id="username" class="username"></div>
+
+      <div id="buttonLogin" class="containerLogin" style="left:20%; top:10vw">
+        <div class="centerLogin">
+          <button class="btnLogin" onclick="deleteAllCookies()">
+            <span>ABMELDEN</span>
+          </button>
+
+        </div>
+        </div>
+    </div>
+
+ <!-- WARENKORB -->
+    <div id="cart" class="cartWrapper">
+      <img id="closeCart"src="images/x_white.png" alt="close3" class="close3">
+        <img id="leer"src="images/x_red.png" alt="leer" class="leeren">
+        <div class="cartHeadline">WARENKORB</div>
+        <div id="anzahl" class="artikelSumme"></div><br>
+        <div class="cartLine"></div>
+          <div class="gesamtSumme" id="preisAnzeige"></div>
+    </div>
+
+
+    </form>
+
+ <!-- Informations -->
+    <div class="dunkel"></div>
+    <img src="images/impressum_overlay.png" class="impressumVerlauf" alt="">
+    <div class="impressumWrapper">
+        <div class="impressumUebr">ÜBER UNS</div>
+        <div class="impressumText">
+          Wir sind eine Gruppe aus drei Leuten, die für ein spezielles Problem eine Lösung gesucht haben und darüber unser erstes gemeinsames Unternehmen gegründet haben um Anderen so zu helfen. Aus unserem Studium heraus haben wir unsere Idee weiter entwickelt und bieten nun hochleistungs Actioncams an.
+        </div>
+    </div>
+
+
+ <!-- Navigationsleiste -->
+    <nav>
+      <ul id="navigation" class="nav-links" style="opacity:1">
+        <li><a href="kamera.html" class="underline">Kamera</a></li>
+          <li><a href="app.html"class="underline">App</a></li>
+            <li><a href="zubehoer.html" class="underline">Zubehör</a></li>
+              <li style="border-bottom: 6px solid #fff;"><a href="ueberuns.html" class="underline">Über uns</a></li>
+
+              <!-- Suchleiste-->
+              <div id="wrap">
+                <form autocomplete="on" id="formSubmit" onsubmit="search1()">
+                  <input class=" search" id="search" name="search" type="text" placeholder="SUCHE"><input class="search" id="search_submit" value="" type="submit">
+                  <div id="ajax-response"></div>
+                </form>
+              </div>
+
+            <img src="images/warenkorb_button.png" alt="warenkorb" class="warenkorb" onclick="numOf()">
+            <img id="images" src="images/profil_button.png" alt="login" class="login" onclick="checkCookie()" >
+
+      </ul>
+        </nav>
+      <!-- Burger -->
+      <div class="burger">
+        <div class="line1">  </div>
+        <div class="line2">  </div>
+        <div class="line3">  </div>
+      </div>
+
+ <!-- Änderung des Login Icons -->
+      <script>
+          var a = '<?php echo $a; ?>'; //outputting string foo in context of JS
+        if(a == 1){
+          var d = document.getElementById("images");
+          d.setAttribute("src", "images/profil_button_button.png");
+        }
+
+        if(a == 2){
+          var d = document.getElementById("images");
+          d.setAttribute("src", "images/profil_button_red.png");
+        }
+      </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="script/app.js"></script>
+</body>
+
+</html>

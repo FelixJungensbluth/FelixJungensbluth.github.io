@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Artikelseite</title>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="icon" type="image/png" href="images/Logo.png" />
+
+
+</head>
+
+<body id="artikelBg">
+
+  <!-- Logo -->
+  <a href="index.html">
+    <div id="logo"><img src="images/Logo.png" alt="sdfsdf" class="logo"></div>
+    </a>
+
+<!-- Anmelden -->
+    <div id="login" class="loginWrapper">
+      <img id="closeLogin" src="images/x_white.png" alt="close1" class="close">
+      <div class="anmelden">ANMELDEN</div>
+      <a href="registrierung.html">
+      <div class="registerLink">DU HAST NOCH KEINEN ACCOUNT?</div>
+      </a>
+
+      <form method="post">
+        <label class="abstand">
+        <input name="logNickname" id="name" type="text" class="inputUser" placeholder="BENUTZERNAME"><br>
+      </label>
+        <input name="logPasswort" id="name" type="password" class="inputUser" placeholder="PASSWORT">
+
+      <div id="buttonLogin" class="containerLogin">
+        <div class="centerLogin">
+          <button class="btnLogin" name="loginButton" type="submit">
+            <span>ANMELDEN</span>
+          </button>
+
+        </div>
+        </div>
+    </div>
+
+<!-- Abmelden -->
+    <div id="login1" class="loginWrapper1">
+      <img id="closeLogin" src="images/x_white.png" alt="close1" class="close1">
+      <div class="anmelden1">ABMELDEN</div>
+
+        <div id="username" class="username"></div>
+
+      <div id="buttonLogin" class="containerLogin" style="left:20%; top:10vw">
+        <div class="centerLogin">
+          <button class="btnLogin" onclick="deleteAllCookies()">
+            <span>ABMELDEN</span>
+          </button>
+
+        </div>
+        </div>
+    </div>
+
+    </form>
+
+<!-- Warenkorb -->
+    <div id="cart" class="cartWrapper">
+      <img id="closeCart"src="images/x_white.png" alt="close3" class="close3">
+        <img id="leer"src="images/x_red.png" alt="leer" class="leeren">
+        <div class="cartHeadline">WARENKORB</div>
+        <div id="anzahl" class="artikelSumme"></div><br>
+        <div class="cartLine"></div>
+          <div class="gesamtSumme" id="preisAnzeige"></div>
+    </div>
+    <button name="subject1" style="display:none"></button>
+    <button name="two" style="display:none"></button>
+    <button name="subject" style="display:none"></button>
+    <button name="bag" style="display:none"></button>
+    <button name="gimbal" style="display:none"></button>
+
+<!-- Informationen -->
+    <div class="artikelDunkel"></div>
+    <img src="images/webverlauf.png" alt="" class="artikelVerlauf">
+    <div class="artikelWrapper">
+  <div class="container3" style="top:57vh; left:14vw; animation:slideinRight">
+    <div id="center3" class="center3">
+      <button id="testbutton" name="case" class="btn3" onclick="numOf()" value="100">
+        <span>WARENKORB</span>
+      </button>
+    </div>
+
+  </div>
+        <div class="artikelX">CASE </div>
+        <div class="artikelPreis">100$</div>
+        <div class="artikelBeschreibung">
+          Mit dieser Case gehst du sicher, dass deine Kamera auch jeden Schlag kratzfrei überlebt und kein Wasser deine Daten wegspült.
+        </div>
+    </div>
+    <div class="artikelWrapperRechts">
+      <div class="slideShow" style="top:40vh; width:40vw; left:60vw">
+          <img class="mySlides" src="images/case3.png" style="width:100%">
+          <img class="mySlides" src="images/case.png" style="width:100%">
+          <button class="slideBtnLeft" onclick="plusDivs(-1)" style="top:-22vw; left:2vw"><img src="images/slideBtnLeft.png" style="width:4vw; height:4vw"></button>
+          <button class="slideBtnRight" onclick="plusDivs(+1)"style="top:-22vw; left:31vw"><img src="images/slideBtnRight.png" style="width:4vw; height:4vw"></button>
+
+        </div>
+    </div>
+
+<!-- Navigationsleiste -->
+    <nav>
+      <ul id="navigation" class="nav-links" style="opacity:1">
+        <li><a href="kamera.html" class="underline">Kamera</a></li>
+          <li><a href="app.html"class="underline">App</a></li>
+            <li><a href="zubehoer.html" class="underline">Zubehör</a></li>
+              <li><a href="ueberuns.html" class="underline">Über uns</a></li>
+
+              <!-- Suchleiste-->
+              <div id="wrap">
+                <form autocomplete="on" id="formSubmit" onsubmit="search1()">
+                  <input class=" search" id="search" name="search" type="text" placeholder="SUCHE"><input class="search" id="search_submit" value="" type="submit">
+                  <div id="ajax-response"></div>
+                </form>
+              </div>
+
+              <img src="images/warenkorb_button.png" alt="warenkorb" class="warenkorb" onclick="numOf()">
+            <img id="images" src="images/profil_button.png" alt="login" class="login" onclick="checkCookie()" >
+
+      </ul>
+        </nav>
+      <!-- Burger -->
+      <div class="burger">
+        <div class="line1">  </div>
+        <div class="line2">  </div>
+        <div class="line3">  </div>
+      </div>
+
+<!-- Ändern des Login Icons -->
+      <script>
+          var a = '<?php echo $a; ?>'; //outputting string foo in context of JS
+        if(a == 1){
+          var d = document.getElementById("images");
+          d.setAttribute("src", "images/profil_button_button.png");
+        }
+
+        if(a == 2){
+          var d = document.getElementById("images");
+          d.setAttribute("src", "images/profil_button_red.png");
+        }
+      </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="script/kategorie.js"></script>
+<!-- Bildslider -->
+<script type="text/javascript">
+var slideIndex = 1;
+  showDivs(slideIndex);
+
+  function plusDivs(n) {
+    showDivs(slideIndex += n);
+  }
+
+  function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+      }
+      x[slideIndex-1].style.display = "block";
+      }
+</script>
+</body>
+
+</html>
