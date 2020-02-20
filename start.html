@@ -3,24 +3,25 @@
 
 <head>
   <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EagleTech Modelle</title>
+  <title>EagleTech</title>
   <link rel="stylesheet" href="style/style.css">
   <link rel="icon" type="image/png" href="images/Logo.png" />
-
 
 </head>
 
 <body>
-
   <!-- Logo -->
-  <a href="start.html">
-    <div id="logo"><img src="images/Logo.png" alt="sdfsdf" class="logo"></div>
-  </a>
+  <div id="logo"><img src="images/Logo.png" alt="sdfsdf" class="logo"></div>
 
+  <!-- PageIndicator -->
+  <div id="pageIndecator" class="wrapperIndecator">
+    <svg id="indecator10" class="indecator1" onclick="scrollIndicatorTop()" style="visibility:visible"></svg>
+    <svg id="indecator2" class="indecator2" onclick="scrollIndicatorMid()" style="visibility:visible"></svg>
+    <svg id="indecator4" class="indecator4" onclick="scrollIndicatorBot()" style="visibility:visible"></svg>
+    <svg id="indecator3" class="indecator3" onclick="scrollIndicatorMid2()" style="visibility:visible"></svg>
+  </div>
 
-
-  <!-- Anmleden -->
-  <div id=testbutton></div>
+  <!-- Login -->
   <div id="login" class="loginWrapper">
     <img id="closeLogin" src="images/x_white.png" alt="close1" class="close">
     <div class="anmelden">ANMELDEN</div>
@@ -48,6 +49,7 @@
   <div id="login1" class="loginWrapper1">
     <img id="closeLogin" src="images/x_white.png" alt="close1" class="close1">
     <div class="anmelden1">ABMELDEN</div>
+    <div id="username" class="username"></div>
 
     <div id="username" class="username"></div>
 
@@ -61,13 +63,6 @@
     </div>
   </div>
 
-  <button name="subject" style="display:none"></button>
-  <button name="subject1" style="display:none"></button>
-  <button name="two" style="display:none"></button>
-  <button name="case" style="display:none"></button>
-  <button name="bag" style="display:none"></button>
-  <button name="gimbal" style="display:none"></button>
-
 
   <!-- Warenkorb -->
   <div id="cart" class="cartWrapper">
@@ -78,51 +73,82 @@
     <div class="cartLine"></div>
     <div class="gesamtSumme" id="preisAnzeige"></div>
   </div>
-
   </form>
 
-
-
-  <!-- PageIndicator -->
-  <div id="pageIndecator" class="wrapperIndecator">
-    <svg id="indecator10" class="indecator1" onclick="scrollIndicatorTop()"></svg>
-    <svg id="indecator2" class="indecator2" onclick="scrollIndicatorMid()"></svg>
-    <svg id="indecator4" class="indecator4" onclick="scrollIndicatorBot()"></svg>
-  </div>
-
+  <img id="kamera" src="images/kamera5.png" alt="kamera" class="kamera">
   <!-- Parallax Effekt -->
-  <header class="KameraKotegorieParallax" id="kategorie">
-    <img src="images/overlay4.png" alt="background" class="blueTriangleKategorie">
-    <img id="kamera10" src="images/kamera5.png" class="kamera1">
-    <img id="kamera2" src="">
-    <img id="kamera3" src="">
+  <header style="overflow-y:scroll" id="para">
 
+    <img src="images/331.png" alt="background" class="blueTriangle" style="z-index:1">
     <!-- Schwarzer transparntefr Layer -->
     <div class="layer"></div>
 
+
+
+
     <!-- Informations Ebene -->
     <div class="wrapper1">
-      <div id="button3" class="container3"></div>
-      <div id="one"> </div>
-      <div id="erklärung"></div>
-    </div>
-
-    <div class="hide3">
-      <div class="wrapper5">
-        <div id="button4" class="container3"></div>
-        <div id="one4"> </div>
-        <div id="erklärung4"></div>
+      <div id="button3" class="container3">
+        <div id="center3" class="center3"><a href="artikel1.html"><button name="one" class="btn3"><svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+                <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" style="stroke-width:7px" />
+                <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" style="stroke-width:7px" /></svg><span>MEHR ERFAHREN</span></button></a></div>
+      </div>
+      <div id="one">
+        <div class="onex"> ONE </div>
+      </div>
+      <div id="erklärung">
+        <div class="erklärung"> <span>Scharfes Bild und neue Technik<br><span> auf kleinem Raum , passend für</span><br><span> jedes deiner Erlebnisse! </div>
       </div>
     </div>
 
-    <div class="hide3">
-      <div class="wrapper6">
-        <div id="button5" class="container3"></div>
-        <div id="beschreibung1"> </div>
-        <div id="beschreibungText1"></div>
+    <div id="a"></div>
+
+    <div class="hide2">
+      <div class="wrapper4">
+        <div id="section4">
+          <div id="feature">
+            <div> <span>FEATURES</span> </div>
+          </div>
+        </div>
+        <div id="section5">
+          <div id="featureText">
+            <div><span>- Gestochen scharfes Bild</span> <br><span>- 64 GB lokaler Speicherplatz</span> <br><span>- Direkter Upload in die Cloud</span> <br><span>- Gefertigt aus Materialien <br><span>der Raumfahrt</span> </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="hide">
+      <div class="wrapper2">
+        <div id="button2" class="container2">
+          <div class="center2"><a href="artikel1.html"><button class="btn2"><svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+                  <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" style="stroke-width:7px" />
+                  <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" style="stroke-width:7px" /></svg><span>MEHR ERFAHREN</span></button></a></div>
+        </div>
+        <div id="section1">
+          <div id="beschreibung">
+            <div> BESCHREIBUNG </div>
+          </div>
+        </div>
+        <div id="section2">
+          <div id="beschreibungText">
+            <div><span>Die ONE X ist ein neues technisches</span> <br><span> Wunderwerk. Sie ist eine robuste </span> <br><span>Actioncam, welche alle deine</span> <br><span> besonderen Momente festhält.</span> </div>
+          </div>
+        </div>
       </div>
     </div>
 
+    <!-- Bildslider -->
+    <div class="slideShow">
+      <img class="mySlides" src="images/slide1.jpg" style="width:100%">
+      <img class="mySlides" src="images/slide2.jpg" style="width:100%">
+      <img class="mySlides" src="images/slide3.jpg" style="width:100%">
+      <img class="mySlides" src="images/slide4.jpg" style="width:100%">
+      <button class="slideBtnLeft" onclick="plusDivs(-1)"><img src="images/slideBtnLeft.png"></button>
+      <button class="slideBtnRight" onclick="plusDivs(+1)"><img src="images/slideBtnRight.png"></button>
+    </div>
 
     <!-- Footer -->
     <div class="footer">
@@ -145,10 +171,10 @@
 
   </header>
 
-  <!-- Navigationsleiste -->
+  <!-- NavigationBar -->
   <nav>
     <ul id="navigation" class="nav-links" style="opacity:1">
-      <li style="border-bottom: 6px solid #fff;"><a href="kamera.html" class="underline">Kamera</a></li>
+      <li><a href="kamera.html" class="underline">Kamera</a></li>
       <li><a href="app.html" class="underline">App</a></li>
       <li><a href="zubehoer.html" class="underline">Zubehör</a></li>
       <li><a href="ueberuns.html" class="underline">Über uns</a></li>
@@ -157,12 +183,13 @@
       <div id="wrap">
         <form autocomplete="on" id="formSubmit" onsubmit="search1()">
           <input class=" search" id="search" name="search" type="text" placeholder="SUCHE"><input class="search" id="search_submit" value="" type="submit">
+          <div id="ajax-response"></div>
         </form>
       </div>
 
+
       <img src="images/warenkorb_button.png" alt="warenkorb" class="warenkorb" onclick="numOf()">
       <img id="images" src="images/profil_button.png" alt="login" class="login" onclick="checkCookie()">
-
     </ul>
   </nav>
   <!-- Burger -->
@@ -171,7 +198,6 @@
     <div class="line2"> </div>
     <div class="line3"> </div>
   </div>
-
 
   <!-- Änderung des Login Icons -->
   <script>
@@ -186,9 +212,10 @@
       d.setAttribute("src", "images/profil_button_red.png");
     }
   </script>
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script type="text/javascript" src="script/kategorie.js"></script>
+  <script type="text/javascript" src="script/start.js">
+
+  </script>
 </body>
 
 </html>

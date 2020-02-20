@@ -2,33 +2,33 @@
 <html>
 
 <head>
-    <title>FormularSeite</title>
-    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="style/style.css">
-        <link rel="icon" type="image/png" href="images/Logo.png" />
+  <title>FormularSeite</title>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="icon" type="image/png" href="images/Logo.png" />
 
 </head>
 
 <body id="formularBg">
 
-   <!-- Logo -->
-  <a href="index.html">
+  <!-- Logo -->
+  <a href="start.html">
     <div id="logo"><img src="images/Logo.png" alt="sdfsdf" class="logo"></div>
+  </a>
+
+  <!-- Anmelden -->
+  <div id="login" class="loginWrapper">
+    <img id="closeLogin" src="images/x_white.png" alt="close1" class="close">
+    <div class="anmelden">ANMELDEN</div>
+    <a href="registrierung.html">
+      <div class="registerLink">DU HAST NOCH KEINEN ACCOUNT?</div>
     </a>
 
- <!-- Anmelden -->
-    <div id="login" class="loginWrapper">
-      <img id="closeLogin" src="images/x_white.png" alt="close1" class="close">
-      <div class="anmelden">ANMELDEN</div>
-      <a href="registrierung.html">
-      <div class="registerLink">DU HAST NOCH KEINEN ACCOUNT?</div>
-      </a>
-
-      <form method="post">
-        <label class="abstand">
+    <form method="post">
+      <label class="abstand">
         <input name="logNickname" id="name" type="text" class="inputUser" placeholder="BENUTZERNAME"><br>
       </label>
-        <input name="logPasswort" id="name" type="password" class="inputUser" placeholder="PASSWORT">
+      <input name="logPasswort" id="name" type="password" class="inputUser" placeholder="PASSWORT">
 
       <div id="buttonLogin" class="containerLogin">
         <div class="centerLogin">
@@ -37,186 +37,186 @@
           </button>
 
         </div>
-        </div>
+      </div>
+  </div>
+
+  <!-- Abmelden -->
+  <div id="login1" class="loginWrapper1">
+    <img id="closeLogin" src="images/x_white.png" alt="close1" class="close1">
+    <div class="anmelden1">ABMELDEN</div>
+
+    <div id="username" class="username"></div>
+
+    <div id="buttonLogin" class="containerLogin" style="left:20%; top:10vw">
+      <div class="centerLogin">
+        <button class="btnLogin" onclick="deleteAllCookies()">
+          <span>ABMELDEN</span>
+        </button>
+
+      </div>
     </div>
+  </div>
 
- <!-- Abmelden -->
-    <div id="login1" class="loginWrapper1">
-      <img id="closeLogin" src="images/x_white.png" alt="close1" class="close1">
-      <div class="anmelden1">ABMELDEN</div>
-
-        <div id="username" class="username"></div>
-
-      <div id="buttonLogin" class="containerLogin" style="left:20%; top:10vw">
-        <div class="centerLogin">
-          <button class="btnLogin" onclick="deleteAllCookies()">
-            <span>ABMELDEN</span>
-          </button>
-
-        </div>
-        </div>
-    </div>
-
- <!-- Warenkorb -->
-    <div id="cart" class="cartWrapper">
-      <img id="closeCart"src="images/x_white.png" alt="close3" class="close3">
-        <img id="leer"src="images/x_red.png" alt="leer" class="leeren">
-        <div class="cartHeadline">WARENKORB</div>
-        <div id="anzahl" class="artikelSumme"></div><br>
-        <div class="cartLine"></div>
-        <div class="gesamtSumme" id="preisAnzeige"></div>
-    </div>
+  <!-- Warenkorb -->
+  <div id="cart" class="cartWrapper">
+    <img id="closeCart" src="images/x_white.png" alt="close3" class="close3">
+    <img id="leer" src="images/x_red.png" alt="leer" class="leeren">
+    <div class="cartHeadline">WARENKORB</div>
+    <div id="anzahl" class="artikelSumme"></div><br>
+    <div class="cartLine"></div>
+    <div class="gesamtSumme" id="preisAnzeige"></div>
+  </div>
 
 
-    </form>
+  </form>
 
-     <!-- Informationen -->
-    <div class="dunkel"></div>
-    <img src="images/webverlauf.png" alt="" class="formularVerlauf">
-    <div class="FormularWrapperLinks">
-        <div class="FormularX">REGISTRIEREN</div>
-        <div class="FormularBeschreibung">
-            <ul type="square">
-                <li>24h online Kundenservice</li>
-                <li>Newsletter mit aktuellen Informationen</li>
-                <li>Vernetzung mit Connect+</li>
-            </ul>
-        </div>
-    </div>
-
-
- <!-- Formulare -->
-<div class="FormularWrapperRechts">
-    <form class="FormularBumms" action="?register=1" method="post">
-        <div class="formularReihe">
-            <div class="formularLinks">
-                <label for="name" class="formularLabel">NAME:</label>
-            </div>
-            <div class="formularRechts">
-                <input name="Name" id="name" type="text" class="inputFelder" placeholder="Name" required>
-            </div>
-        </div>
-        <div class="formularReihe">
-            <div class="formularLinks">
-                <label for="vorname" class="formularLabel">VORNAME:</label>
-            </div>
-            <div class="formularRechts">
-                <input name="Vorname" id="vorname" type="text" class="inputFelder" placeholder="Vorname" required>
-            </div>
-        </div>
-        <div class="formularReihe">
-            <div class="formularLinks">
-                <label for="email" class="formularLabel">E-MAIL:</label>
-            </div>
-            <div class="formularRechts">
-                <input name="email" id="email" type="email" class="inputFelder" placeholder="e-mail" required>
-            </div>
-        </div>
-        <div class="formularReihe">
-            <div class="formularLinks">
-                <label class="formularLabel">STADT:</label>
-            </div>
-            <div class="formularRechts">
-                <input name="stadt" type="text" class="inputFelder" placeholder="Stadt" required>
-            </div>
-        </div>
-        <div class="formularReihe">
-            <div class="formularLinks">
-                <label class="formularLabel">PLZ:</label>
-            </div>
-            <div class="formularRechts">
-                <input name="plz" type="text" class="inputFelder" pattern="[0-9]{5}" placeholder="PLZ" required>
-            </div>
-        </div>
-        <div class="formularReihe">
-            <div class="formularLinks">
-                <label class="formularLabel">STR.:</label>
-            </div>
-            <div class="formularRechts">
-                <input name="straße" type="text" class="inputFelder" placeholder="Straße" required>
-            </div>
-        </div>
-        <div class="formularReihe">
-            <div class="formularLinks">
-                <label class="formularLabel">BENUTZERNAME:</label>
-            </div>
-            <div class="formularRechts">
-                <input name="nickname" type="text" class="inputFelder" placeholder="Benutzername" required>
-            </div>
-        </div>
-        <div class="formularReihe">
-            <div class="formularLinks">
-                <label class="formularLabel">PASSWORT:</label>
-            </div>
-            <div class="formularRechts">
-                <input name="passwort" type="password" class="inputFelder" placeholder="Passwort" required>
-            </div>
-        </div>
-        <div class="formularReihe">
-            <div class="formularLinks">
-                <label class="formularLabel">WIEDERHOLEN:</label>
-            </div>
-            <div class="formularRechts">
-                <input name="passwort2" type="password" class="inputFelder" placeholder="Passwort" required>
-            </div>
-        </div>
-        <div class="formularReihe">
-            <div class="container3" style="top:5vw; left:14%">
-              <div id="center3" class="center3">
-                  <button class="btn3" type="submit" name="submit">
-                    <span>REGISTRIEREN</span>
-                  </button>
-              </div>
-            </div>
-        </div>
-    </form>
-
-
-</div>
-
- <!-- Navigationsleiste -->
-    <nav>
-      <ul id="navigation" class="nav-links" style="opacity:1">
-        <li><a href="kamera.html" class="underline">Kamera</a></li>
-          <li><a href="app.html"class="underline">App</a></li>
-            <li><a href="zubehoer.html" class="underline">Zubehör</a></li>
-              <li><a href="ueberuns.html" class="underline">Über uns</a></li>
-
-              <!-- Suchleiste-->
-              <div id="wrap">
-                <form autocomplete="on" id="formSubmit" onsubmit="search1()">
-                  <input class=" search" id="search" name="search" type="text" placeholder="SUCHE"><input class="search" id="search_submit" value="" type="submit">
-                  <div id="ajax-response"></div>
-                </form>
-              </div>
-
-            <img src="images/warenkorb_button.png" alt="warenkorb" class="warenkorb" onclick="numOf()">
-          <img id="images" src="images/profil_button.png" alt="login" class="login" onclick="checkCookie()" >
-
+  <!-- Informationen -->
+  <div class="dunkel"></div>
+  <img src="images/webverlauf.png" alt="" class="formularVerlauf">
+  <div class="FormularWrapperLinks">
+    <div class="FormularX">REGISTRIEREN</div>
+    <div class="FormularBeschreibung">
+      <ul type="square">
+        <li>24h online Kundenservice</li>
+        <li>Newsletter mit aktuellen Informationen</li>
+        <li>Vernetzung mit Connect+</li>
       </ul>
-        </nav>
-      <!-- Burger -->
-      <div class="burger">
-        <div class="line1">  </div>
-        <div class="line2">  </div>
-        <div class="line3">  </div>
+    </div>
+  </div>
+
+
+  <!-- Formulare -->
+  <div class="FormularWrapperRechts">
+    <form class="FormularBumms" action="?register=1" method="post">
+      <div class="formularReihe">
+        <div class="formularLinks">
+          <label for="name" class="formularLabel">NAME:</label>
+        </div>
+        <div class="formularRechts">
+          <input name="Name" id="name" type="text" class="inputFelder" placeholder="Name" required>
+        </div>
+      </div>
+      <div class="formularReihe">
+        <div class="formularLinks">
+          <label for="vorname" class="formularLabel">VORNAME:</label>
+        </div>
+        <div class="formularRechts">
+          <input name="Vorname" id="vorname" type="text" class="inputFelder" placeholder="Vorname" required>
+        </div>
+      </div>
+      <div class="formularReihe">
+        <div class="formularLinks">
+          <label for="email" class="formularLabel">E-MAIL:</label>
+        </div>
+        <div class="formularRechts">
+          <input name="email" id="email" type="email" class="inputFelder" placeholder="e-mail" required>
+        </div>
+      </div>
+      <div class="formularReihe">
+        <div class="formularLinks">
+          <label class="formularLabel">STADT:</label>
+        </div>
+        <div class="formularRechts">
+          <input name="stadt" type="text" class="inputFelder" placeholder="Stadt" required>
+        </div>
+      </div>
+      <div class="formularReihe">
+        <div class="formularLinks">
+          <label class="formularLabel">PLZ:</label>
+        </div>
+        <div class="formularRechts">
+          <input name="plz" type="text" class="inputFelder" pattern="[0-9]{5}" placeholder="PLZ" required>
+        </div>
+      </div>
+      <div class="formularReihe">
+        <div class="formularLinks">
+          <label class="formularLabel">STR.:</label>
+        </div>
+        <div class="formularRechts">
+          <input name="straße" type="text" class="inputFelder" placeholder="Straße" required>
+        </div>
+      </div>
+      <div class="formularReihe">
+        <div class="formularLinks">
+          <label class="formularLabel">BENUTZERNAME:</label>
+        </div>
+        <div class="formularRechts">
+          <input name="nickname" type="text" class="inputFelder" placeholder="Benutzername" required>
+        </div>
+      </div>
+      <div class="formularReihe">
+        <div class="formularLinks">
+          <label class="formularLabel">PASSWORT:</label>
+        </div>
+        <div class="formularRechts">
+          <input name="passwort" type="password" class="inputFelder" placeholder="Passwort" required>
+        </div>
+      </div>
+      <div class="formularReihe">
+        <div class="formularLinks">
+          <label class="formularLabel">WIEDERHOLEN:</label>
+        </div>
+        <div class="formularRechts">
+          <input name="passwort2" type="password" class="inputFelder" placeholder="Passwort" required>
+        </div>
+      </div>
+      <div class="formularReihe">
+        <div class="container3" style="top:5vw; left:14%">
+          <div id="center3" class="center3">
+            <button class="btn3" type="submit" name="submit">
+              <span>REGISTRIEREN</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+
+
+  </div>
+
+  <!-- Navigationsleiste -->
+  <nav>
+    <ul id="navigation" class="nav-links" style="opacity:1">
+      <li><a href="kamera.html" class="underline">Kamera</a></li>
+      <li><a href="app.html" class="underline">App</a></li>
+      <li><a href="zubehoer.html" class="underline">Zubehör</a></li>
+      <li><a href="ueberuns.html" class="underline">Über uns</a></li>
+
+      <!-- Suchleiste-->
+      <div id="wrap">
+        <form autocomplete="on" id="formSubmit" onsubmit="search1()">
+          <input class=" search" id="search" name="search" type="text" placeholder="SUCHE"><input class="search" id="search_submit" value="" type="submit">
+          <div id="ajax-response"></div>
+        </form>
       </div>
 
-      <!-- Ändern des Login Icons -->
-      <script>
-          var a = '<?php echo $a; ?>';
-        if(a == 1){
-          var d = document.getElementById("images");
-          d.setAttribute("src", "images/profil_button_button.png");
-        }
+      <img src="images/warenkorb_button.png" alt="warenkorb" class="warenkorb" onclick="numOf()">
+      <img id="images" src="images/profil_button.png" alt="login" class="login" onclick="checkCookie()">
 
-        if(a == 2){
-          var d = document.getElementById("images");
-          d.setAttribute("src", "images/profil_button_red.png");
-        }
-      </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript" src="script/app.js"></script>
+    </ul>
+  </nav>
+  <!-- Burger -->
+  <div class="burger">
+    <div class="line1"> </div>
+    <div class="line2"> </div>
+    <div class="line3"> </div>
+  </div>
+
+  <!-- Ändern des Login Icons -->
+  <script>
+    var a = '<?php echo $a; ?>';
+    if (a == 1) {
+      var d = document.getElementById("images");
+      d.setAttribute("src", "images/profil_button_button.png");
+    }
+
+    if (a == 2) {
+      var d = document.getElementById("images");
+      d.setAttribute("src", "images/profil_button_red.png");
+    }
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript" src="script/app.js"></script>
 </body>
 
 </html>

@@ -12,20 +12,6 @@ function numOf() {
   document.getElementById("anzahl").innerHTML = 'Artikel im Warenkorb: ' + localStorage.getItem("vOneLocalStorage");
 }
 
-function reload() {
-  if (window.performance) {
-    console.info("window.performance works fine on this browser");
-  }
-  if (performance.navigation.type == 1) {
-    console.info("This page is reloaded");
-    window.location = "start.html"
-  } else {
-    console.info("This page is not reloaded");
-  }
-}
-
-reload();
-
 
 /*
 Der Warenkorb wird geleert
@@ -340,6 +326,7 @@ $(container).scroll(function() {
   var div2 = $("#section4");
   var div3 = $("#section5");
   var button2 = $("button2");
+  console.log(scrollPercentRounded);
 
   //Bewegung der Kamera von links nach rechts
   $("#kamera").css("left", Math.round((-scrollPercentRounded + 120) * 0.55) + "%");
@@ -350,8 +337,6 @@ $(container).scroll(function() {
   if (scrollPercentRounded < 25) {
     $("#indecator10").css("background", "#fff");
     $("#indecator2").css("background", "none");
-    $("#indecator3").css("background", "none");
-    $("#indecator4").css("background", "none");
     $("#kamera").attr("src", "images/kamera5.png");
 
   }
@@ -373,7 +358,6 @@ $(container).scroll(function() {
     $("#indecator2").css("background", "none");
     $("#indecator4").css("background", "#fff");
     $("#indecator3").css("background", "none");
-    $("#indecator10").css("background", "none");
     $("#kamera").attr("src", "images/kamera5.png");
 
   }
@@ -391,12 +375,13 @@ $(container).scroll(function() {
     $("#indecator2").css("background", "none");
     $("#indecator4").css("background", "none");
     $("#indecator3").css("background", "#fff");
-    $("#indecator10").css("background", "none");
     $("#kamera").attr("src", "images/kamera5.png");
   }
 });
 
-
+/*
+Halten und drücken
+*/
 var item = document.querySelector("#button");
 var indecator = document.querySelector("#indecator1");
 var timerID;
@@ -416,14 +401,14 @@ item.addEventListener("pressHold", doSomething, false);
 function pressingDown(e) {
   requestAnimationFrame(timer);
   e.preventDefault();
-
 }
 
 function notPressingDown(e) {
   cancelAnimationFrame(timerID);
-  //  counter = 0;
+  counter = 0;
+
   //setzt die Breite des Balkens zurück
-  elem1.style.width = 0 + "px";
+  elem1.style.width = counter + "px";
 }
 
 function timer() {
@@ -432,28 +417,11 @@ function timer() {
     counter++;
     elem1.style.width = counter * 13 + "px";
   } else {
+
     //man startet immer oben auf der Website
     container.scrollTop = 0;
     $("#para").css("overflow-y", "scroll");
-
-    //Alle Elemete der Startseite werden Hinzugefügt und nicht mehr sichtbare Elemente gelösct
-    document.getElementById("a").innerHTML = '<img src="images/331.png" alt="background" class="blueTriangle">';
-    document.getElementById("one").innerHTML = '  <div class="onex"> ONE </div>';
-    document.getElementById("erklärung").innerHTML = '  <div class="erklärung"> <span>Scharfes Bild und neue Technik<br><span> auf kleinem Raum , passend für</span><br><span> jedes deiner Erlebnisse! </div>';
-    document.getElementById("beschreibung").innerHTML = '  <div class="beschreibung"> BESCHREIBUNG </div>';
-    document.getElementById("feature").innerHTML = '  <div> <span>FEATURES</span> </div>';
-    document.getElementById("featureText").innerHTML = '  <div><span>- Gestochen scharfes Bild</span> <br><span>- 64 GB lokaler Speicherplatz</span> <br><span>- Direkter Upload in die Cloud</span> <br><span>- Gefertigt aus Materialien <br><span>der Raumfahrt</span> </div>';
-    document.getElementById("beschreibungText").innerHTML = ' <div><span>Die ONE X ist ein neues technisches</span> <br><span> Wunderwerk. Sie ist eine robuste </span> <br><span>Actioncam, welche alle deine</span> <br><span> besonderen Momente festhält.</span> </div>';
-    document.getElementById("Kamera").innerHTML = '<img id="kamera" src="images/kamera5.png" alt="kamera" class="kamera">';
-    document.getElementById("button2").innerHTML = '<div class="center2"><a href="artikel1.html"><button class="btn2"><svg width="180px" height="60px" viewBox="0 0 180 60" class="border"><polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" style="stroke-width:7px"/><polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" style="stroke-width:7px"/></svg><span>MEHR ERFAHREN</span></button></a></div>';
     document.getElementById("button3").innerHTML = '<div id="center3" class="center3"><a href="artikel1.html"><button name="one" class="btn3"><svg width="180px" height="60px" viewBox="0 0 180 60" class="border"><polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" style="stroke-width:7px"/><polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" style="stroke-width:7px"/></svg><span>MEHR ERFAHREN</span></button></a></div>';
-    document.getElementById("test").remove();
-    document.getElementById("button").remove();
-    document.getElementById("gif").remove();
-    document.getElementById("percent").remove();
-
-    document.getElementById("navigation").style.opacity = "1";
-
     //PageIndicatoren sind in der mobil Verison nicht sichtbar
     if (docWidth > 768) {
       $("#indecator10").css("visibility", "visible");
