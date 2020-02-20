@@ -1,0 +1,2691 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Heebo:100,400,700&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  overflow: hidden;
+  height: 100%;
+  background-color: #1C1C1C;
+}
+
+/*
+Klasse für das Schließen des Warenkorbes
+*/
+.leeren {
+  position: relative;
+  width: 6%;
+  height: auto;
+  top: 35%;
+  left: 83%;
+  z-index: 10001;
+  cursor: pointer;
+}
+
+/*
+Warenkorb
+*/
+.cartWrapper {
+  visibility: hidden;
+  position: absolute;
+  width: 25vw;
+  height: 35vh;
+  background-color: #1C1C1C;
+  top: 0%;
+  right: 0%;
+  z-index: 10000;
+  border-bottom: 5px solid;
+  border-left: 5px solid;
+  border-right: 5px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(45deg, #00C4ED, #165CB0);
+}
+
+.cartHeadline {
+  position: relative;
+  left: 7%;
+  top: -5%;
+  font-size: 1.5vw;
+  font-family: 'Heebo', sans-serif;
+  color: #fff;
+  font-weight: normal;
+  z-index: 999;
+}
+
+.artikelSumme {
+  position: relative;
+  left: 7%;
+  top: 13%;
+  font-size: 1.2vw;
+  font-family: 'Heebo', sans-serif;
+  color: #fff;
+  font-weight: lighter;
+  z-index: 999;
+}
+
+.gesamtSumme {
+  position: relative;
+  left: 7%;
+  top: 39%;
+  font-size: 1.5vw;
+  font-family: 'Heebo', sans-serif;
+  color: #fff;
+  font-weight: lighter;
+  z-index: 999;
+}
+
+.cartLine {
+  height: 2px;
+  width: 100%;
+  z-index: 9999999;
+  position: relative;
+  top: 30%;
+  border: 2px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(45deg, #00C4ED, #165CB0);
+  color: white;
+}
+
+.close3 {
+  cursor: pointer;
+  position: relative;
+  width: 6%;
+  height: auto;
+  top: 6%;
+  left: 90%;
+  z-index: 10001;
+}
+
+/*
+Login
+*/
+.username {
+  position: relative;
+  left: 3%;
+  font-size: 1vw;
+  font-family: 'Heebo', sans-serif;
+  color: #fff;
+  font-weight: normal;
+  z-index: 999;
+}
+
+.close1 {
+  position: relative;
+  width: 6%;
+  height: auto;
+  top: 6%;
+  left: 90%;
+  z-index: 10001;
+}
+
+.abstand label, input {
+  display: block;
+}
+
+.abstand label {
+  margin-bottom: 10px;
+}
+
+.logInForm {
+  float: left;
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: 5%;
+  left: 6%;
+}
+
+.loginForm {
+  float: left;
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: 5%;
+  left: 6%;
+}
+
+.passwordForm {
+  float: left;
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: 50%;
+  left: 3%;
+}
+
+.registerLink {
+  position: relative;
+  left: 0%;
+  top: 46%;
+  font-size: 0.6vw;
+  font-family: 'Heebo', sans-serif;
+  color: #00C4ED;
+  font-weight: normal;
+  z-index: 999;
+}
+
+.anmelden {
+  position: relative;
+  left: 3%;
+  top: -5%;
+  font-size: 1.5vw;
+  font-family: 'Heebo', sans-serif;
+  color: #fff;
+  font-weight: normal;
+  z-index: 999;
+}
+
+.inputUser {
+  width: 93%;
+  font-size: 1.4vw;
+  font-family: 'Heebo', sans-serif;
+  color: #ffffff;
+  font-weight: lighter;
+  z-index: 999;
+  background-color: #818181;
+  border: none;
+}
+
+.loginWrapper {
+  display: none;
+  visibility: hidden;
+  position: absolute;
+  padding: 10px;
+  width: 25vw;
+  height: 35vh;
+  background-color: #1C1C1C;
+  top: 0%;
+  right: 0%;
+  z-index: 10000;
+  border-bottom: 5px solid;
+  border-left: 5px solid;
+  border-right: 5px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(45deg, #00C4ED, #165CB0);
+}
+
+/*
+Abmelden
+*/
+.logInForm1 {
+  float: left;
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: 5%;
+  left: 6%;
+}
+
+.loginForm1 {
+  float: left;
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: 5%;
+  left: 6%;
+}
+
+.passwordForm1 {
+  float: left;
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: 50%;
+  left: 3%;
+}
+
+.registerLink1 {
+  position: relative;
+  left: 0%;
+  top: 42%;
+  font-size: 0.6vw;
+  font-family: 'Heebo', sans-serif;
+  color: #00C4ED;
+  font-weight: normal;
+  z-index: 999;
+}
+
+.anmelden1 {
+  position: relative;
+  left: 3%;
+  top: -5%;
+  font-size: 1.5vw;
+  font-family: 'Heebo', sans-serif;
+  color: red;
+  font-weight: normal;
+  z-index: 999;
+}
+
+.inputUser1 {
+  width: 93%;
+  font-size: 1.4vw;
+  font-family: 'Heebo', sans-serif;
+  color: #ffffff;
+  font-weight: lighter;
+  z-index: 999;
+  background-color: #818181;
+  border: none;
+}
+
+.layerForm1 {
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300%;
+  z-index: 1000;
+}
+
+.loginWrapper1 {
+  display: none;
+  visibility: hidden;
+  position: absolute;
+  padding: 10px;
+  width: 25vw;
+  height: 35vh;
+  background-color: #1C1C1C;
+  top: 0%;
+  right: 0%;
+  z-index: 10000;
+  border-bottom: 5px solid;
+  border-left: 5px solid;
+  border-right: 5px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(45deg, #00C4ED, #165CB0);
+}
+
+.close {
+  position: relative;
+  width: 6%;
+  height: auto;
+  top: 6%;
+  left: 90%;
+  z-index: 10001;
+}
+
+/*
+Animation für den Warenkorb, Anmlden und Abmelden
+*/
+@keyframes slideTop {
+  0% {
+    top: -400px;
+  }
+
+  20% {
+    top: -400px;
+  }
+
+  35% {
+    top: 0px;
+  }
+
+  100% {
+    right: 0px;
+  }
+}
+
+.aniTop {
+  animation: slideTop 1s;
+}
+
+.warenkorb {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  float: right;
+  cursor: pointer;
+  top: -9%;
+  left: 140%;
+}
+
+.login {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  float: right;
+  cursor: pointer;
+  top: -8%;
+  left: 130%;
+}
+
+.login1 {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  float: right;
+  cursor: pointer;
+  top: 0%;
+  left: 130%;
+}
+
+/*
+Suchleiste
+*/
+#wrap {
+  visibility: visible;
+  display: inline-block;
+  position: relative;
+  height: 50px;
+  float: right;
+  padding: 0;
+  position: absolute;
+  top: -15%;
+  left: 125%;
+  z-index: 999;
+}
+
+.search[type="text"] {
+  height: 40px;
+  font-size: 30px;
+  display: inline-block;
+  font-family: 'Heebo', sans-serif;
+  font-weight: normal;
+  border: none;
+  outline: none;
+  color: #fff;
+  padding: 3px;
+  padding-right: 60px;
+  width: 0px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: none;
+  z-index: 3;
+  transition: width .6s;
+  cursor: pointer;
+}
+
+.search[type="text"]:focus {
+  width: 240px;
+  z-index: 1;
+  border-bottom: 2px solid #fff;
+  cursor: text;
+}
+
+.search[type="submit"] {
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  float: right;
+  background: url(such_button.png);
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  cursor: pointer;
+  opacity: 1;
+  cursor: pointer;
+  transition: opacity .4s ease;
+}
+
+/*
+Überuns Impressum Hintergrundbild
+*/
+#bg {
+  background-size: 100%;
+  height: 100%;
+  background-image: url(bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 10;
+}
+
+/*
+Artikel Hintergrundbild
+*/
+#artikelBg {
+  background-size: 100%;
+  height: 100%;
+  background-image: url(artikelbg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 10;
+}
+
+/*
+schwarzer Transparenter layer zum abdunkeln
+*/
+.dunkel {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/*
+schwarzer Transparenter layer zum abdunkeln
+*/
+.artikelDunkel {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/*
+Registrierung Hintergrundbild
+*/
+#formularBg {
+  background-size: 100%;
+  height: 100%;
+  background-image: url(formularbg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 100;
+}
+
+/*
+App Hintergrundbild
+*/
+#appBg {
+  background-size: 100%;
+  height: 100%;
+  background-image: url(appbg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 10;
+}
+
+/*Impressum*/
+.impressumVerlauf {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0px;
+  left: 0px;
+}
+
+.impressumWrapper {
+  position: absolute;
+  height: 70%;
+  width: 85%;
+  left: 10%;
+  top: 15%;
+}
+
+.impressumUebr {
+  position: relative;
+  font-size: 6vw;
+  font-weight: bolder;
+  font-family: 'Open Sans ', sans-serif;
+  color: #ffffff;
+}
+
+.impressumText {
+  position: relative;
+  top: 5%;
+  font-size: 2vw;
+  font-weight: lighter;
+  font-family: 'Heebo', sans-serif;
+  color: #ffffff;
+}
+
+/*Über uns*/
+.unsVerlauf {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0px;
+  left: 0px;
+}
+
+.dunkel {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.unsWrapper {
+  position: absolute;
+  height: 70%;
+  width: 85%;
+  left: 10%;
+  top: 15%;
+}
+
+.unsUebr {
+  position: relative;
+  font-size: 6vw;
+  font-weight: bolder;
+  font-family: 'Open Sans ', sans-serif;
+  color: #ffffff;
+}
+
+.unsText {
+  position: relative;
+  top: 5%;
+  font-size: 2vw;
+  font-weight: lighter;
+  font-family: 'Heebo', sans-serif;
+  color: #ffffff;
+}
+
+/*Formular*/
+#ja {
+  background-color: #1c1c1c;
+}
+
+.formularVerlauf {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0px;
+  right: 0px;
+  opacity: 0.7;
+}
+
+.FormularX {
+  position: relative;
+  font-size: 5vw;
+  font-family: 'Open Sans ', sans-serif;
+  font-weight: bolder;
+  color: #ffffff;
+  top: 0%;
+  left: 0%;
+}
+
+.FormularBeschreibung {
+  position: relative;
+  width: 100%;
+  top: 5%;
+  left: 1%;
+  font-size: 2vw;
+  font-family: 'Heebo', sans-serif;
+  font-weight: lighter;
+  color: #ffffff;
+}
+
+.FormularWrapperLinks {
+  position: absolute;
+  width: 40%;
+  height: 80%;
+  top: 15%;
+  left: 5%;
+  overflow: hidden;
+}
+
+.FormularRegBtn {
+  position: absolute;
+  right: 10px;
+  bottom: 0px;
+}
+
+.FormularBumms {
+  position: relative;
+  font-size: 1.25vw;
+  font-family: 'Heebo', sans-serif;
+  font-weight: lighter;
+  color: #ffffff;
+}
+
+.inputFelder {
+  width: 100%;
+  font-size: 1.25vw;
+  font-family: 'Heebo', sans-serif;
+  font-weight: lighter;
+  z-index: 999;
+}
+
+.FormularWrapperRechts {
+  position: absolute;
+  width: 40%;
+  height: 87%;
+  top: 10%;
+  right: 5%;
+  overflow: hidden;
+  padding: 15px;
+  padding-top: 0px;
+}
+
+.formularReihe::after {
+  display: table;
+  clear: both;
+  padding: 10px;
+}
+
+.formularLinks {
+  float: left;
+  width: 100%;
+}
+
+.formularRechts {
+  z-index: 999;
+  float: left;
+  width: 100%;
+  font-size: 1.3vw;
+  font-family: 'Heebo', sans-serif;
+  font-weight: lighter;
+}
+
+.formularLabel {
+  padding-top: 6px;
+  display: inline-block;
+}
+
+/*Artikel*/
+.artikelVerlauf {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0px;
+  right: 0px;
+  opacity: 0.7;
+}
+
+.artikel {
+  position: relative;
+  font-size: 8vw;
+  font-family: 'Open Sans ', sans-serif;
+  font-weight: bolder;
+  color: #ffffff;
+  top: 0%;
+  left: 0%;
+}
+
+.artikelX {
+  position: relative;
+  font-size: 8vw;
+  font-family: 'Open Sans ', sans-serif;
+  font-weight: bolder;
+  color: #ffffff;
+  top: 0%;
+  left: 0%;
+}
+
+.artikelX::after {
+  content: 'X';
+  background-image: linear-gradient(to right, #00C4ED, #165CB0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.artikelPreis {
+  position: relative;
+  font-size: 2vw;
+  font-family: 'Heebo', sans-serif;
+  color: #ffffff;
+  top: 0%;
+  left: 4%;
+}
+
+.artikelBeschreibung {
+  position: relative;
+  font-size: 1.5vw;
+  font-family: 'Heebo', sans-serif;
+  font-weight: lighter;
+  color: #ffffff;
+  width: 100%;
+  top: 5%;
+  left: 1%;
+}
+
+.artikelBild {
+  position: absolute;
+  width: 25vw;
+  height: auto;
+  left: 15%;
+  top: 30%;
+}
+
+.artikelPfeilLinks {
+  position: absolute;
+  height: 5vw;
+  top: 50%;
+  left: 3%;
+}
+
+.artikelPfeilRechts {
+  position: absolute;
+  height: 5vw;
+  top: 50%;
+  right: 3%;
+}
+
+.artikelUebr {
+  position: relative;
+  font-size: 3vw;
+  font-family: 'Heebo', sans-serif;
+  color: #ffffff;
+  width: 35%;
+  top: 5%;
+  left: 1%;
+}
+
+.artikelWrapper {
+  position: absolute;
+  width: 35%;
+  height: 80%;
+  top: 15%;
+  left: 10%;
+  overflow: hidden;
+}
+
+.artikelWrapperRechts {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -20%;
+  right: 5%;
+}
+
+/*App*/
+.appVerlauf {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.8;
+}
+
+.appDunkel {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.appWrapper {
+  position: absolute;
+  width: 55%;
+  height: 70%;
+  left: 5%;
+  top: 20%;
+}
+
+.appUebr {
+  position: relative;
+  font-size: 10vw;
+  font-weight: bold;
+  font-family: 'Open Sans ', sans-serif;
+  color: #ffffff;
+  top: 0px;
+  left: 0px;
+}
+
+.appBeschreibung {
+  position: relative;
+  font-size: 1.5vw;
+  font-weight: lighter;
+  font-family: "Heebo", sans-serif;
+  color: #ffffff;
+  top: 5%;
+  left: 0px;
+  width: 90%;
+}
+
+.appDownload {
+  position: relative;
+  top: 10%;
+}
+
+.appBtn {
+  height: 60px;
+  width: 180px;
+  background: transparent;
+  border: 0px;
+  cursor: pointer;
+}
+
+#appBtnRechts {
+  position: relative;
+  left: 5%;
+}
+
+.appApp {
+  position: absolute;
+  right: 10%;
+  top: 20%;
+  height: 70%;
+}
+
+.cancerBild {
+  height: auto;
+  width: 100%;
+}
+
+/*
+Hover für die Navogationsleiste
+*/
+.underline:hover {
+  text-decoration: none;
+  border-bottom: 6px solid;
+  border-image-slice: 1;
+  border-image-source: #fff;
+  transition: ease-in-out 0.2s;
+}
+
+/*
+Bildslider
+*/
+.slideShow {
+  position: absolute;
+  width: 50vw;
+  height: auto;
+  z-index: 9000;
+  top: 225%;
+  left: 35%;
+  overflow: hidden;
+}
+
+.mySlides {
+  position: relative;
+  display: none;
+  z-index: 100;
+}
+
+.slideBtnLeft {
+  position: relative;
+  height: 3vw;
+  width: 3vw;
+  left: 2vw;
+  top: -15vw;
+  z-index: 1000;
+  min-height: 2vw;
+  background: transparent;
+  border: 0px;
+  cursor: pointer;
+}
+
+.slideBtnRight {
+  position: relative;
+  height: 3vw;
+  width: 3vw;
+  left: 41vw;
+  top: -15vw;
+  z-index: 1001;
+  min-height: 2vw;
+  background: transparent;
+  border: 0px;
+  cursor: pointer;
+}
+
+/*
+pageIndicator
+*/
+.wrapperIndecator {
+  position: absolute;
+  top: 50%;
+  left: 96%;
+  width: 15px;
+  height: 500px;
+}
+
+.indecator1 {
+  visibility: hidden;
+  position: relative;
+  border: 1px solid #fff;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  top: -6%;
+  z-index: 999;
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+}
+
+.indecator2 {
+  visibility: hidden;
+  position: relative;
+  border: 1px solid #fff;
+  width: 15px;
+  height: 15px;
+  top: -4%;
+  z-index: 999;
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+}
+
+.indecator3 {
+  visibility: hidden;
+  position: relative;
+  border: 1px solid #fff;
+  width: 15px;
+  height: 15px;
+  top: 0%;
+  z-index: 999;
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+}
+
+.indecator4 {
+  visibility: hidden;
+  position: relative;
+  border: 1px solid #fff;
+  width: 15px;
+  height: 15px;
+  top: -2%;
+  z-index: 999;
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+}
+
+/*
+Instagram Icon
+*/
+#instagram {
+  position: fixed;
+  left: 9.5%;
+  width: 50px;
+  height: 50px;
+  background: url(social_sprites.png) 0 0;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/*
+Facebook Icon
+*/
+#facebook {
+  position: fixed;
+  left: 21.3%;
+  width: 50px;
+  height: 50px;
+  background: url(social_sprites.png) -51px 0;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/*
+Twitter Icon
+*/
+#twitter {
+  position: fixed;
+  left: 32%;
+  width: 50px;
+  height: 50px;
+  background: url(social_sprites.png) -101px 0;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/*
+Youtube Icon
+*/
+#youtube {
+  position: fixed;
+  left: 42%;
+  width: 50px;
+  height: 50px;
+  background: url(social_sprites.png) -151px 0;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/*
+Transparenter schwarzer Layer um das Hintergrundbild dunkler zu machen
+*/
+.layer {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300%;
+}
+
+/*
+Posionierung und Skalierung des Kamera GIF
+*/
+.kameraGif {
+  position: relative;
+  width: 35%;
+  top: -40vw;
+  left: -18vw;
+  height: auto;
+  z-index: 100
+}
+
+/*
+Posionierung und Skalierung der Kamera1
+*/
+.kamera {
+  top: 10%;
+  left: 65%;
+  animation: slideinRight 5s;
+  position: absolute;
+  width: 30%;
+  max-width: 350px;
+  height: auto;
+  z-index: 100;
+}
+
+/*
+Posionierung und Skalierung der Kamera2
+*/
+.kamera1 {
+  visibility: visible;
+  top: 35%;
+  left: 65%;
+  animation: slideinRight 5s;
+  position: absolute;
+  width: 30%;
+  max-width: 450px;
+  height: auto;
+  z-index: 100;
+}
+
+/*
+Posionierung und Skalierung der Kamera3
+*/
+.kamera2 {
+  top: 130%;
+  left: 65%;
+  animation: slideinRight 3s;
+  position: absolute;
+  width: 35%;
+  max-width: 450px;
+  height: auto;
+  z-index: 100;
+}
+
+/*
+Posionierung und Skalierung der Kamera4
+*/
+.kamera3 {
+  top: 230%;
+  left: 6%;
+  animation: slidein 3s;
+  position: absolute;
+  width: 30%;
+  max-width: 295px;
+  height: auto;
+  z-index: 100;
+}
+
+/*
+Posionierung und Skalierung der Kamera5
+*/
+.kamera4 {
+  top: 230%;
+  left: 6%;
+  animation: slidein 3s;
+  position: absolute;
+  width: 30%;
+  max-width: 195px;
+  height: auto;
+  z-index: 100;
+}
+
+/*
+Parallax Effekt Startseite
+*/
+header {
+  box-sizing: border-box;
+  min-height: 50vh;
+  padding: 30vw 0 5vw;
+  position: absolute;
+  transform-style: inherit;
+  width: 100vw;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  height: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+header, header:before {
+  background: 50% 50% / cover;
+}
+
+header::before {
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  background-image: url(hintergund3.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  transform-origin: center center 0;
+  transform: translateZ(-1px) scale(2);
+  z-index: -2;
+  max-width: 100%;
+  height: 200%;
+}
+
+/*
+Parallax Effekt Kameraseite
+*/
+.KameraKotegorieParallax {
+  box-sizing: border-box;
+  min-height: 50vh;
+  padding: 30vw 0 5vw;
+  position: absolute;
+  transform-style: inherit;
+  width: 100vw;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.KameraKotegorieParallax, .KameraKotegorieParallax:before {
+  background: 50% 50% / cover;
+}
+
+.KameraKotegorieParallax::before {
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  background-image: url(test3.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  transform-origin: center center 0;
+  transform: translateZ(-1px) scale(2);
+  z-index: -2;
+  max-width: 100%;
+  height: 200%;
+}
+
+/*
+Parallax Effekt Kategoreiseite
+*/
+.KotegorieParallax {
+  box-sizing: border-box;
+  min-height: 50vh;
+  padding: 30vw 0 5vw;
+  position: absolute;
+  transform-style: inherit;
+  width: 100vw;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.KotegorieParallax, .KotegorieParallax:before {
+  background: 50% 50% / cover;
+}
+
+.KotegorieParallax::before {
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  background-image: url(hintergund2.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  transform-origin: center center 0;
+  transform: translateZ(-1px) scale(2);
+  z-index: -2;
+  max-width: 100%;
+  height: 200%;
+}
+
+/*
+Logo wird hinzugefügt
+*/
+.logo {
+  position: fixed;
+  top: 1%;
+  left: 5%;
+  width: 5%;
+  max-width: 400px;
+  height: auto;
+  z-index: 999
+}
+
+/*
+NavigationBar
+*/
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  min-height: 11vh;
+  color: #fff;
+  font-family: 'Heebo', sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  opacity: 0;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: 14px;
+  text-align: left;
+  line-height: 0.1;
+}
+
+.burger {
+  position: fixed;
+  right: 5%;
+  display: none;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(255, 255, 255);
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+/*
+Wenn des Fenster eine Größe von 1200px hat wird der abstand der Elemente in der Nav vergrößert
+*/
+@media screen and (max-width:1200px) {
+  .nav-links {
+    width: 60%;
+  }
+
+  input[type="text"]:focus {
+    width: 190px;
+  }
+}
+
+/*
+Blaue Bildebene Startseite
+*/
+.blueTriangle {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  width: 100%;
+  height: 300%;
+  z-index: 0;
+  animation: slideRight 5s;
+}
+
+/*
+Blaue Bildebene Kategorie
+*/
+.blueTriangleKategorie {
+  visibility: visible;
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  width: 100%;
+  height: 300%;
+  z-index: 100;
+  animation: slideRight 5s;
+}
+
+/*
+Animation damit sich die blaue Bildeben von rechts ins Fenster bewegt
+*/
+@keyframes slideRight {
+  0% {
+    right: -1000px;
+  }
+
+  20% {
+    right: -1000px;
+  }
+
+  35% {
+    right: 0px;
+  }
+
+  100% {
+    right: 0px;
+  }
+}
+
+.wrapper1 {
+  position: absolute;
+  top: 20vh;
+  left: 2.5vw;
+  width: 60%;
+  height: 50%;
+}
+
+.wrapper5 {
+  position: absolute;
+  top: 120vh;
+  left: 2.5vw;
+  width: 60%;
+  height: 50%;
+}
+
+.wrapper6 {
+  position: absolute;
+  top: 220vh;
+  left: 47vw;
+  width: 60%;
+  height: 50%;
+}
+
+.wrapper2 {
+  position: absolute;
+  top: 149vh;
+  left: 55vw;
+  width: 60%;
+  height: 50%;
+}
+
+.wrapper3 {
+  position: fixed;
+  top: 175vh;
+  right: 3%;
+  width: 40%;
+  height: 8%;
+}
+
+/*
+Schriftzug OneX
+*/
+.onex {
+  color: #fff;
+  font-family: 'Open Sans ', sans-serif;
+  font-weight: bolder;
+  font-size: 10vw;
+  letter-spacing: inherit;
+  position: relative;
+  top: 30%;
+  left: 3%;
+  z-index: 100;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: showup 9s;
+}
+
+/*
+Schriftzug One
+*/
+.one {
+  visibility: hidden;
+  color: #fff;
+  font-family: 'Open Sans ', sans-serif;
+  font-weight: bolder;
+  font-size: 10vw;
+  letter-spacing: inherit;
+  position: relative;
+  top: 30%;
+  left: 3%;
+  z-index: 100;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: showup 9s;
+}
+
+/*
+X mit Verlauf
+*/
+.onex::after {
+  content: 'X';
+  background-image: linear-gradient(to right, #00C4ED, #165CB0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.show {
+  animation: showup 9s;
+}
+
+/*
+Animation damit ONE X auftaucht
+*/
+@keyframes showup {
+  0% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/*
+Erklärnugstext
+*/
+.erklärung {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  height: 100%;
+  top: 30%;
+  left: 3%;
+  z-index: 100;
+}
+
+.erklärung span {
+  animation: slidein 5s;
+  color: #fff;
+  font-family: 'Heebo', sans-serif;
+  font-weight: lighter;
+  font-size: 3vw;
+}
+
+.erklärung img {
+  animation: slidein 5s;
+}
+
+.erklärung4 {
+  visibility: hidden;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  height: 100%;
+  top: 30%;
+  left: 3%;
+  z-index: 100;
+}
+
+.erklärung4 span {
+  animation: slidein 5s;
+  color: #fff;
+  font-family: 'Heebo', sans-serif;
+  font-weight: lighter;
+  font-size: 3vw;
+}
+
+.erklärung4 img {
+  animation: slidein 5s;
+}
+
+/*
+Animation damit der Erklärungstext in das Fenster bewegt
+*/
+@keyframes slidein {
+  0% {
+    margin-left: -1000px;
+  }
+
+  20% {
+    margin-left: -1000px;
+  }
+
+  35% {
+    margin-left: 0px;
+  }
+
+  100% {
+    margin-left: 0px;
+  }
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.hide2 {
+  visibility: hidden;
+}
+
+.hide3 {
+  visibility: hidden;
+}
+
+.wrapper4 {
+  position: absolute;
+  left: 3%;
+  width: 40%;
+  height: 8%;
+  top: 110vh;
+  z-index: 1200;
+}
+
+/*
+Feature Text
+*/
+.featurewerwre {
+  font-family: 'Open Sans ', sans-serif;
+  font-weight: bolder;
+  font-size: 3vw;
+  letter-spacing: inherit;
+  position: relative;
+  z-index: 100;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.featurewerwre span {
+  background-image: linear-gradient(to right, #00C4ED, #165CB0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.featureText {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  position: relative;
+  z-index: 1200;
+}
+
+.featureText span {
+  color: #fff;
+  font-family: 'Heebo', sans-serif;
+  font-weight: lighter;
+  font-size: 2vw;
+  animation: slideinRight 5s;
+  z-index: 1200;
+}
+
+/*
+Beschreibung
+*/
+.beschreibung {
+  color: #fff;
+  font-family: 'Open Sans ', sans-serif;
+  font-weight: bolder;
+  font-size: 5.5vw;
+  letter-spacing: inherit;
+  position: relative;
+  z-index: 100;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: showup 9s;
+}
+
+.beschreibungText {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  position: relative;
+  z-index: 100;
+}
+
+.beschreibungText span {
+  color: #fff;
+  font-family: 'Heebo', sans-serif;
+  font-weight: lighter;
+  font-size: 2vw;
+  animation: slideinRight 5s;
+}
+
+.beschreibung1 {
+  visibility: hidden;
+  color: #fff;
+  font-family: 'Open Sans ', sans-serif;
+  font-weight: bolder;
+  font-size: 10vw;
+  letter-spacing: inherit;
+  position: relative;
+  z-index: 100;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.beschreibungText1 {
+  visibility: hidden;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  position: relative;
+  z-index: 100;
+}
+
+.beschreibungText1 span {
+  color: #fff;
+  font-family: 'Heebo', sans-serif;
+  font-weight: lighter;
+  font-size: 3vw;
+}
+
+.testAni {
+  animation: slidein 3s;
+}
+
+.testAniShowUp {
+  animation: showup 9s;
+}
+
+/*
+Animation damit der Erklärungstext in das Fenster bewegt
+*/
+@keyframes slideinRight {
+  0% {
+    margin-left: 1000px;
+  }
+
+  20% {
+    margin-left: 1000px;
+  }
+
+  35% {
+    margin-left: 0px;
+  }
+
+  100% {
+    margin-left: 0px;
+  }
+}
+
+.aniSlideRight {
+  animation: slideinRight 3s;
+}
+
+/*
+Ladebalken
+*/
+.load {
+  width: 0px;
+  height: 5px;
+  position: relative;
+  top: -35vw;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 2s ease;
+  background-image: linear-gradient(to right, #00C4ED, #165CB0)
+}
+
+.load:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+/*
+Button
+*/
+.buttonWrapper {
+  position: absolute;
+  left: 50vw;
+  top: 40vw;
+  width: 100%;
+  height: 100%;
+  margin: auto 0;
+}
+
+.container {
+  width: 180px;
+  height: 60px;
+  position: relative;
+  top: -35vw;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.center {
+  width: 180px;
+  height: 60px;
+  position: relative;
+  z-index: 1000;
+}
+
+.btn {
+  width: 180px;
+  height: 60px;
+  cursor: pointer;
+  background: transparent;
+  border: 2px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(45deg, #00C4ED, #165CB0);
+  outline: none;
+  z-index: 1000;
+}
+
+.btn:hover {
+  transition: 3.5s ease-in-out;
+  background: #91C9FF;
+  border: 4px solid #00C4ED;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(45deg, #00C4ED, #165CB0);
+}
+
+svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  fill: none;
+  stroke: #fff;
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  transition: ease-in-out 1s;
+}
+
+.btn:hover svg {
+  transition: 1s ease-in-out;
+  stroke-dashoffset: -480;
+}
+
+.btn span {
+  color: white;
+  font-size: 18px;
+  font-weight: normal;
+  font-family: 'Heebo', sans-serif;
+  transition: 500ms;
+}
+
+.btn:hover span {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+}
+
+/*
+Button2
+*/
+.container2 {
+  width: 10.7vw;
+  height: 3.5vw;
+  position: relative;
+  left: 8.5%;
+  top: 28vw;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.center2 {
+  width: 10.7vw;
+  height: 3.5vw;
+  position: relative;
+  animation: slideinRight 5s;
+}
+
+.btn2 {
+  width: 10.7vw;
+  height: 3.5vw;
+  cursor: pointer;
+  background: transparent;
+  border: 0.2vw solid #fff;
+  outline: none;
+}
+
+.btn2:hover {
+  transition: 1s ease-in-out;
+  background: rgba(255, 255, 255, 0.25);
+  border-style: outset;
+  border: 3px solid #fff;
+}
+
+.btn2 svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  fill: none;
+}
+
+.btn2 span {
+  color: white;
+  font-size: 1vw;
+  font-weight: normal;
+  font-family: 'Heebo', sans-serif;
+  transition: 500ms;
+}
+
+.btn2:hover span {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+}
+
+/*
+Button3
+*/
+.container3 {
+  width: 10.7vw;
+  height: 3.5vw;
+  position: relative;
+  left: 12%;
+  top: 35vw;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.center3 {
+  width: 10.7vw;
+  height: 3.5vw;
+  position: relative;
+  animation: slidein 5s;
+}
+
+.btn3 {
+  width: 10.7vw;
+  height: 3.5vw;
+  cursor: pointer;
+  background: transparent;
+  border: 0.2vw solid #fff;
+  outline: none;
+}
+
+.btn3:hover {
+  transition: 1s ease-in-out;
+  background: rgba(255, 255, 255, 0.25);
+  border: 3px solid #fff;
+}
+
+.btn3 svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  fill: none;
+}
+
+.btn3 span {
+  color: white;
+  font-size: 1vw;
+  font-weight: normal;
+  font-family: 'Heebo', sans-serif;
+  transition: 500ms;
+}
+
+.btn3:hover span {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+}
+
+/*
+ButtonLogin
+*/
+.containerLogin {
+  position: relative;
+  left: 80%;
+  top: 9vh;
+  width: 8vw;
+  height: 2.5vw;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+.centerLogin {
+  width: 7vw;
+  height: 2.5vw;
+}
+
+.btnLogin {
+  width: 7vw;
+  height: 2.5vw;
+  cursor: pointer;
+  background: transparent;
+  border: 0.2vw solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(45deg, #00C4ED, #165CB0);
+  outline: none;
+}
+
+.btnLogin:hover {
+  transition: 1s ease-in-out;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.btnLogin svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  fill: none;
+}
+
+.btnLogin span {
+  color: white;
+  font-size: 1vw;
+  font-weight: normal;
+  font-family: 'Heebo', sans-serif;
+  transition: 500ms;
+}
+
+.btnLogin:hover span {
+  font-size: 1.1vw;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+}
+
+/*
+Footer
+*/
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  color: #fff;
+  font-family: 'Heebo', sans-serif;
+  font-size: 1vw;
+  font-weight: normal;
+  text-transform: uppercase;
+  position: absolute;
+  left: 0;
+  top: 300%;
+  width: 100%;
+  height: 8%;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  text-align: right;
+  z-index: 100;
+}
+
+.footer h1 {
+  justify-content: flex-start;
+}
+
+.footerContent {
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  opacity: 1;
+}
+
+.footerContent li {
+  list-style: none;
+}
+
+.footerContent a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: 14em;
+  text-align: left;
+  line-height: 0.1;
+}
+
+@media screen and (max-width:1200px) {
+  .nav-links {
+    width: 60%;
+  }
+}
+
+/*
+Wenn des Fenster eine Größe von 768px wird die Animation für die Mobile NavigationBar getriggert
+*/
+@media screen and (max-width:768px) {
+  .leeren {
+    top: 39%;
+  }
+
+  .cartWrapper {
+    width: 100vw;
+    height: 50vh;
+  }
+
+  .cartHeadline {
+    left: 7%;
+    top: -5%;
+    font-size: 9vw;
+    font-family: 'Heebo', sans-serif;
+  }
+
+  .artikelSumme {
+    left: 7%;
+    top: 13%;
+    font-size: 6vw;
+    font-family: 'Heebo', sans-serif;
+  }
+
+  .gesamtSumme {
+    position: relative;
+    left: 7%;
+    top: 39%;
+    font-size: 6vw;
+    font-family: 'Heebo', sans-serif;
+    color: #fff;
+    font-weight: lighter;
+    z-index: 999;
+  }
+
+  .cartLine {
+    height: 2px;
+    width: 100%;
+    z-index: 9999999;
+    position: relative;
+    top: 30%;
+    border: 2px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(45deg, #00C4ED, #165CB0);
+    color: white;
+  }
+
+  .username {
+    font-size: 7vw;
+  }
+
+  #wrap {
+    left: 55%;
+    top: 10%;
+  }
+
+  .warenkorb {
+    left: 60%;
+    top: 10%;
+  }
+
+  .login {
+    left: 75%;
+    top: 10%;
+  }
+
+  input[type="text"]:focus {
+    width: 190px;
+  }
+
+  .search[type="text"]:focus {
+    width: 190px;
+    z-index: 1;
+    border-bottom: 2px solid #fff;
+    cursor: text;
+  }
+
+  .impressumUebr {
+    font-size: 35px;
+  }
+
+  .impressumText {
+    font-size: 15px;
+  }
+
+  .artikelWrapperRechts {
+    top: -4%;
+  }
+
+  .unsUebr {
+    font-size: 35px;
+  }
+
+  .unsText {
+    font-size: 15px;
+  }
+
+  .formularRechts,
+  .formularLinks {
+    width: 100%;
+  }
+
+  .FormularBeschreibung,
+  .FormularBumms,
+  .inputFelder {
+    font-size: 15px;
+  }
+
+  .formularRechts,
+  .formularLinks {
+    width: 100%;
+  }
+
+  .artikelX {
+    font-size: 9vw;
+  }
+
+  .artikel {
+    font-size: 9vw;
+  }
+
+  .artikelUebr {
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  .artikelBeschreibung {
+    font-size: 15px;
+  }
+
+  .artikelPreis {
+    font-size: 20px;
+  }
+
+  .artikelBild {
+    top: 45%;
+  }
+
+  .artikelPfeilLinks, .artikelPfeilRechts {
+    height: 6vw;
+  }
+
+  .appBeschreibung {
+    font-size: 15px;
+  }
+
+  .appUebr {
+    font-size: 50px;
+  }
+
+  #appBtnRechts {
+    left: 0px;
+  }
+
+  .appApp {
+    width: 22.5vw;
+    height: auto;
+    top: 35%;
+  }
+
+  .cancerBild {
+    width: 65%;
+  }
+
+  .nav-links {
+    position: absolute;
+    right: 0%;
+    height: 100%;
+    top: 0vh;
+    background-image: linear-gradient(180deg, #00C4ED, #165CB0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    font-size: 30px;
+    line-height: 2.5;
+    z-index: 8000;
+  }
+
+  .nav-links li {
+    opacity: 0;
+  }
+
+  .burger {
+    display: block;
+    cursor: pointer;
+    z-index: 9999;
+  }
+
+  header::before {
+    background-image: url(hintergund3.jpg);
+    background-size: 100%;
+    transform: translateZ(-1px) scale(4);
+    z-index: -2;
+    max-width: 100%;
+    height: 100%;
+  }
+
+  .KameraKotegorieParallax::before {
+    background-image: url(test3.jpg);
+    background-size: 100%;
+    transform: translateZ(-1px) scale(4);
+    z-index: -2;
+    max-width: 100%;
+    height: 100%;
+  }
+
+  .KotegorieParallax::before {
+    background-image: url(hintergund2.jpg);
+    background-size: 100%;
+    transform: translateZ(-1px) scale(4);
+    z-index: -2;
+    max-width: 100%;
+    height: 100%;
+  }
+
+  .blueTriangle {
+    height: 200%;
+  }
+
+  .blueTriangleKategorie {
+    height: 200%;
+  }
+
+  .footer {
+    top: 200%;
+    width: 100%;
+    height: 8%;
+    font-size: 1vw;
+  }
+
+  .layer {
+    height: 200%;
+  }
+
+  .slideShow {
+    width: 50vw;
+    height: auto;
+    top: 125vw;
+    left: 35%;
+  }
+
+  .onex {
+    font-size: 15vw;
+    top: 30%;
+    left: 3%;
+  }
+
+  .one {
+    font-size: 15vw;
+  }
+
+  .erklärung span {
+    font-size: 4vw;
+  }
+
+  .container {
+    top: -10vw;
+    margin: auto 0;
+  }
+
+  .kameraGif {
+    width: 80%;
+    top: -30vw;
+    left: -38vw;
+    margin: 0 auto;
+  }
+
+  .load {
+    top: 0vw;
+    left: -0vw;
+  }
+
+  .container3 {
+    width: 14.5vw;
+    height: 6vw;
+    left: 13%;
+    top: 53vw;
+  }
+
+  .center3 {
+    width: 14.5vw;
+    height: 6vw;
+  }
+
+  .btn3 {
+    width: 14.5vw;
+    height: 6vw;
+  }
+
+  .btn3 span {
+    font-size: 1.75vw;
+  }
+
+  .container2 {
+    left: 11%;
+    top: 38vw;
+  }
+
+  .center2 {
+    width: 14.5vw;
+    height: 6vw;
+  }
+
+  .btn2 {
+    width: 14.5vw;
+    height: 6vw;
+  }
+
+  .btn2 span {
+    font-size: 1.75vw;
+  }
+
+  .btn2:hover span {
+    font-size: 1.6vw;
+  }
+
+  .btn2:hover {
+    border: 1px solid #fff;
+  }
+
+  .btn3:hover {
+    border: 1px solid #fff;
+  }
+
+  .btn3:hover span {
+    font-size: 1.6vw;
+  }
+
+  .wrapper2 {
+    top: 120vh;
+    left: 44vw;
+  }
+
+  .wrapper3 {
+    top: 80vh;
+    left: 44vw;
+  }
+
+  .beschreibung {
+    font-size: 6.5vw;
+  }
+
+  .beschreibungText span {
+    font-size: 3vw;
+  }
+
+  .slideShow {
+    width: 65vw;
+    height: auto;
+    top: 160%;
+    left: 28%;
+    z-index: 999;
+  }
+
+  .slideBtnLeft {
+    height: 2vw;
+    width: 2vw;
+    left: 1vw;
+    top: -23vw;
+  }
+
+  .slideBtnRight {
+    height: 2vw;
+    width: 2vw;
+    left: 50vw;
+    top: -23vw;
+  }
+
+  .wrapper4 {
+    top: 70vh;
+  }
+
+  .featurewerwre {
+    font-size: 5vw;
+  }
+
+  .featureText span {
+    font-size: 2.2vw;
+  }
+
+  .logo {
+    width: 13%;
+    height: auto;
+    max-height: 600px;
+  }
+
+  .kamera1 {
+    top: 29%;
+  }
+
+  .kamera2 {
+    top: 85%;
+    left: 55%;
+  }
+
+  .kamera3 {
+    max-width: 95px;
+    top: 158%;
+    left: 4%;
+  }
+
+  .kamera4 {
+    max-width: 95px;
+    top: 152%;
+    left: 4%;
+  }
+
+  .wrapper5 {
+    top: 80vh;
+  }
+
+  .wrapper6 {
+    top: 151vh;
+  }
+
+  .beschreibung1 {
+    font-size: 13vw;
+  }
+
+  .loginWrapper {
+    width: 100vw;
+    height: 50vh;
+    top: 0%;
+    right: 0%;
+  }
+
+  .loginWrapper1 {
+    width: 100vw;
+    height: 50vh;
+    top: 0%;
+    right: 0%;
+  }
+
+  .loginForm {
+    width: 100%;
+    height: auto;
+    top: 5%;
+    left: 3%;
+  }
+
+  .passwordForm {
+    width: 100%;
+    height: 50%;
+    top: 50%;
+    left: 3%;
+  }
+
+  .registerLink {
+    left: 3%;
+    top: 50%;
+    font-size: 2vw;
+  }
+
+  .anmelden {
+    left: 3%;
+    top: -5%;
+    font-size: 5.5vw;
+  }
+
+  .anmelden1 {
+    left: 3%;
+    top: -5%;
+    font-size: 10vw;
+  }
+
+  .inputUser {
+    width: 93%;
+    font-size: 5vw;
+  }
+
+  .layerForm {
+    z-index: 9999;
+  }
+
+  .close {
+    width: 6%;
+    height: auto;
+    top: 6%;
+    left: 90%;
+  }
+
+  .containerLogin {
+    width: 25vw;
+    height: 10vw;
+    left: 80%;
+    top: 17vh;
+  }
+
+  .centerLogin {
+    width: 25vw;
+    height: 10vw;
+  }
+
+  .btnLogin {
+    width: 25vw;
+    height: 10vw;
+    border: 0.7vw solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(45deg, #00C4ED, #165CB0);
+  }
+
+  .btnLogin span {
+    font-size: 3vw;
+  }
+
+  .btnLogin:hover span {
+    font-size: 3.5vw;
+    letter-spacing: 0.6;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+/*
+Animation für den Text in der Navigation
+*/
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translate(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+
+/*
+Transformation für den Burger
+*/
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+/*
+Animation für den Text in der Navigation
+*/
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translate(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+
+/*
+Transformation für den Burger
+*/
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+#footerB {
+  font-size: 15pt;
+  visibility: hidden;
+  right: 10%;
+}
+
+@media screen and (max-width:1570px) {
+  .footerContent #footerA {
+    visibility: hidden;
+    width: 100% left: 70%
+  }
+
+  .footer {
+    justify-content: flex-end;
+    align-content: flex-end;
+  }
+
+  #footerB {
+    visibility: visible;
+    text-decoration: none;
+    color: white;
+    width: 80%;
+    right: 10px;
+  }
+
+  #instagram {
+    left: 9.5%;
+  }
+
+  #facebook {
+    left: 25%;
+  }
+
+  #twitter {
+    left: 40%;
+  }
+
+  #youtube {
+    left: 55%;
+  }
+}
