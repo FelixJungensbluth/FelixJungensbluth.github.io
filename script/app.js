@@ -396,7 +396,9 @@ $(container).scroll(function() {
   }
 });
 
-
+/*
+Halten und drücken
+*/
 var item = document.querySelector("#button");
 var indecator = document.querySelector("#indecator1");
 var timerID;
@@ -416,14 +418,14 @@ item.addEventListener("pressHold", doSomething, false);
 function pressingDown(e) {
   requestAnimationFrame(timer);
   e.preventDefault();
-
 }
 
 function notPressingDown(e) {
   cancelAnimationFrame(timerID);
-  //  counter = 0;
+  counter = 0;
+
   //setzt die Breite des Balkens zurück
-  elem1.style.width = 0 + "px";
+  elem1.style.width = counter + "px";
 }
 
 function timer() {
@@ -432,6 +434,7 @@ function timer() {
     counter++;
     elem1.style.width = counter * 13 + "px";
   } else {
+
     //man startet immer oben auf der Website
     container.scrollTop = 0;
     $("#para").css("overflow-y", "scroll");
@@ -450,8 +453,6 @@ function timer() {
     document.getElementById("test").remove();
     document.getElementById("button").remove();
     document.getElementById("gif").remove();
-    document.getElementById("percent").remove();
-
     document.getElementById("navigation").style.opacity = "1";
 
     //PageIndicatoren sind in der mobil Verison nicht sichtbar
